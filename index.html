@@ -10,68 +10,136 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Mi primera pagina Bootstrap</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <!-- Navbar superior -->
+    <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">bit a bit</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sistemas Operativos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hardware y Electrónica</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Search"
+            />
+            <button class="btn btn-light" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+ <!-- cards o tarjetas....... -->
+  <!-- img/sub.jpg -->
+   <!-- 3• <img src="arduino.jpg" class="card-img-bottom"width="50%"alt="">-->
+<div class="container">
+  <div class="row">
+    <div class="col">
+   <div class="card">
+    <img src="img/arduino.jpg" class="card-img-top img-fluid" alt=" ">
+    <div class="card-body">
+      <h5 class="card-title"> modal</h5>
+      <p class="card-tex">este es un ejemplo de una tarjeta</p>
+      <a href="#"class="btn btn-primary">Abrir</a>
+    </div>
+   </div>
+  </div>
+  
+  <div class="col">
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"> tarjeta numero 2</h5>
+      <p class="card-tex">este es un ejemplo de una tarjeta</p>
+      <a href="#"class="btn btn-primary">Abrir</a>
+    </div>
+   </div>
+  </div>
+
+  <div class="col">
+   <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"> tarjetas numero 3</h5>
+      <p class="card-tex">este es un ejemplo de una tarjeta</p>
+      <a href="#"class="btn btn-primary">Abrir</a>
+    </div>
+   </div>
+  </div>
+  
+  </div>
+</div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar izquierdo -->
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+          <div class="position-sticky">
+            <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" target="_blank" href="https://www.tinkercad.com/">TINKERCAD</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
+                <a class="nav-link" target="_blank" href="https://www.arduino.cc/">ARDUINO</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#">COMPONENTES</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
-        </div>
-      </nav>
+        </nav>
+
+        <!-- Contenido principal -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-4">
+          <h1>Bienvenido</h1>
+        </main>
+
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Ejemplo de un Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal del card</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
